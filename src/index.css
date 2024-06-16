@@ -1,0 +1,107 @@
+/* src/index.css or src/index.scss */
+
+/* Importing fonts */
+@font-face {
+  font-family: 'Sentient';
+  src: url('../src/Fonts/WEB/fonts/Sentient-Regular.woff2') format('woff2'),
+       url('../src/Fonts/WEB/fonts/Sentient-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sentient';
+  src: url('../src/Fonts/WEB/fonts/Sentient-Bold.woff2') format('woff2'),
+       url('../src/Fonts/WEB/fonts/Sentient-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../src/Fonts1/WEB/fonts/GeneralSans-Regular.woff2') format('woff2'),
+       url('../src/Fonts1/WEB/fonts/GeneralSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../src/Fonts1/WEB/fonts/GeneralSans-Bold.woff2') format('woff2'),
+       url('../src/Fonts1/WEB/fonts/GeneralSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Tailwind CSS styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom components */
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+/* Responsive utility classes */
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-6;
+  }
+
+  .padding-y {
+    @apply sm:py-24 py-12;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  /* Example of responsive font size */
+  .text-lg-2 {
+    @apply text-lg sm:text-xl;
+  }
+
+  /* Example of responsive margin */
+  .mt-4 {
+    @apply mt-4 sm:mt-6;
+  }
+
+  /* Example of responsive display */
+  .hidden-xs {
+    display: none;
+  }
+  
+  @screen sm {
+    .hidden-xs {
+      display: block;
+    }
+  }
+}
